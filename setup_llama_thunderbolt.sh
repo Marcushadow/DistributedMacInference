@@ -54,18 +54,22 @@ make
 
 echo "Build complete."
 
+# Function to get the IP address of the Thunderbolt Bridge
+get_thunderbolt_ip() {
+    IP_ADDRESS=$(ifconfig bridge0 | grep "inet " | awk '{print $2}')
+    if [ -z "$IP_ADDRESS" ]; then
+        echo "Unable to detect Thunderbolt Bridge IP address. Please ensure the Thunderbolt Bridge is configured correctly."
+        exit 1
+    else
+        echo "Detected Thunderbolt Bridge IP address: $IP_ADDRESS"
+    fi
+}
 
-# 6. Detect the machine's IP address.
-echo "Detecting the machine's IP address..."
-IP_ADDRESS=$(ifconfig en0 | grep "inet " | awk '{print $2}')
-if [ -z "$IP_ADDRESS" ]; then
-    echo "Unable to detect IP address. Please ensure the network interface is active."
-    exit 1
-else
-    echo "Detected IP address: $IP_ADDRESS"
-fi
+# 6. Detect the Thunderbolt Bridge IP address.
+echo "Detecting the Thunderbolt Bridge IP address..."
+get_thunderbolt_ip
 
-# 7. Function to find an available port.
+# Function to find an available port.
 find_open_port() {
     START_PORT=8080
     END_PORT=8100
@@ -89,5 +93,4 @@ echo "Using port: $PORT"
 echo "Starting the llama.cpp RPC server..."
 cd ..
 ./build/bin/llama --server --host "$IP_ADDRESS" --port "$PORT" &
-
 echo "llama.cpp RPC server started at $IP_ADDRESS:$PORT"
