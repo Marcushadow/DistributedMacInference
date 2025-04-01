@@ -1,4 +1,5 @@
 # DistributedMacInference
+https://github.com/ggml-org/llama.cpp/tree/master/examples/rpc
 
 ## Set Up
 ```bash 
