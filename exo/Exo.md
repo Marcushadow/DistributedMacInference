@@ -30,3 +30,8 @@ source install.sh
 ```bash
 ./configure_mlx.sh
 ```
+
+## To run
+```bash
+exo
+```

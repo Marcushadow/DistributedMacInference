@@ -10,6 +10,9 @@ conda create -n llamacpp python=3.12
 
 ### Proceed
 
+```bash
+brew install cmake
+```
 
 ```bash
 git clone https://github.com/ggml-org/llama.cpp

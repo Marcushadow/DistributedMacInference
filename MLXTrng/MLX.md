@@ -223,7 +223,7 @@ https://github.com/mlabonne/llm-datasets?tab=readme-ov-file
 #### Converting a huggingface model
 
 ```bash
-mlx_lm.convert --hf-path google/gemma-3-1b-it
+mlx_lm.convert --hf-path google/gemma-3-1b-it --mlx-path gemma-model
 ```
 
 #### Single device lora command 
@@ -238,10 +238,12 @@ mlx_lm.lora \
 
 #### After Setting up the connection
 ```bash
-    mlx.launch --verbose --hostfile hostfile.json -n 2 mlx_lm.lora --model ./mlx_model --train --data ./data --iters 20
+mlx.launch --verbose --hostfile hostfile.json -n 2 mlx_lm.lora --model ./mlx_model --train --data ./data --iters 20
 ```
 
 ## Copying things over
+## When another mac comes -> use the file sharing.
+
 ```bash
 rsync -r MLXTrng 192.168.1.125:~/Desktop/DistributedMacInference 
 ```
