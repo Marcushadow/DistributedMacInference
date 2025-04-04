@@ -1,0 +1,30 @@
+name: ExoEnv
+channels:
+  - conda-forge
+  - defaults
+  - https://repo.anaconda.com/pkgs/main
+  - https://repo.anaconda.com/pkgs/r
+dependencies:
+  - bzip2=1.0.8=h80987f9_6
+  - ca-certificates=2025.2.25=hca03da5_0
+  - expat=2.6.4=h313beb8_0
+  - libcxx=20.1.1=ha82da77_0
+  - libexpat=2.6.4=h286801f_0
+  - libffi=3.4.4=hca03da5_1
+  - libsqlite=3.46.0=hfb93653_0
+  - libzlib=1.2.13=hfb2fe0b_6
+  - mlx=0.24.1=py312h2b8080f_0
+  - ncurses=6.4=h313beb8_0
+  - openssl=3.4.1=h81ee809_0
+  - pip=25.0=py312hca03da5_0
+  - python=3.12.2=hdf0ec26_0_cpython
+  - python_abi=3.12=5_cp312
+  - readline=8.2=h1a28f6b_0
+  - setuptools=75.8.0=py312hca03da5_0
+  - sqlite=3.45.3=h80987f9_0
+  - tk=8.6.14=h6ba3021_0
+  - tzdata=2025a=h04d1e81_0
+  - wheel=0.45.1=py312hca03da5_0
+  - xz=5.6.4=h80987f9_1
+  - zlib=1.2.13=hfb2fe0b_6
+prefix: /Users/marcus/miniconda3/envs/ExoEnv

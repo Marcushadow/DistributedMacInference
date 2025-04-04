@@ -2,6 +2,15 @@
 ## Replication steps
 Steps to replicate:
 
+### Start a conda env
+
+```bash
+conda create -n llamacpp python=3.12
+```
+
+### Proceed
+
+
 ```bash
 git clone https://github.com/ggml-org/llama.cpp
 cd llama.cpp
