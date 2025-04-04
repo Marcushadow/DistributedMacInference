@@ -9,7 +9,7 @@ cd llama.cpp
 
 ```bash
 cd build-rpc-metal
-cmake -DLLAMA_METAL=ON -DLLAMA_BUILD_RPC=ON ..
+cmake .. -DLLAMA_METAL=ON -DLLAMA_BUILD_RPC=ON
 cmake --build . --config Release
 ```
 

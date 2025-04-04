@@ -1,0 +1,7 @@
+llama.cpp/
+MLXTrng/*/
+
+# Anything with hostfile
+*hostfile*
+
+./llama.cpp/
