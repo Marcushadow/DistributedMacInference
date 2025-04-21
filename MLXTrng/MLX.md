@@ -238,7 +238,7 @@ mlx_lm.lora \
 
 #### After Setting up the connection
 ```bash
-mlx.launch --verbose --hostfile hostfile.json -n 2 mlx_lm.lora --model ./mlx_model --train --data ./data --iters 20
+mlx.launch --verbose --hostfile hostfile.json -n 2 mlx_lm.lora --model ./mlx_model --adapter-path ./adapters --train --data ./data --iters 20
 ```
 
 ## Copying things over
