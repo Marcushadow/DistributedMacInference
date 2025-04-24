@@ -92,10 +92,15 @@ echo "<Entire Key here>" >> ~/.ssh/authorized_keys
 #### Testing the connection
 ```bash
 ssh <username>@ip
+
+# In the event that the username is same for both devices:
+ssh ip
 ```
 
 
-### MLX ring suggested setup (Tested + Not Working)
+### MLX ring suggested setup (Working)
+
+hosts will be found from `ifconfig en1` on each individual mac.
 
 ```bash
 mlx.distributed_config --verbose --hosts xxx.xxx.xxx.xxx,yyy.yyy.yyy.yyy
